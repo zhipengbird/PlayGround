@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios'>
+<playground version='6.0' target-platform='ios' display-mode='raw'>
     <pages>
         <page name='兰德尔数'/>
         <page name='斐波拉契数列'/>
+        <page name='冒泡排序'/>
+        <page name='选择排序'/>
+        <page name='队列'/>
+        <page name='BinaryHeap'/>
+        <page name='PriorityQueue'/>
     </pages>
 </playground>
