@@ -40,9 +40,60 @@ func bubbleSort2<T: Comparable>(array:  inout [T]) ->[T] {
     }
     return array
 }
+func bubbleSort3<T: Comparable>(array:  inout [T]) ->[T] {
+    var index = array.count - 1
+    for _  in 0..<array.count {
+        var swap = false
+        for j  in 0 ..< index {
+            if array[j] > array[j+1] {
+                array.swapAt(j,j+1)
+                swap = true
+                index = j 
+            }
+        }
+        if swap == false {
+            break
+        }
+    }
+    return array
+}
+
+func bubbleSort4<T: Comparable>(array:  inout [T]) ->[T] {
+    
+    for index  in 0 ..< array.count/2 {
+        var isSorted = true
+        for j  in index ..< (array.count - index - 1) {
+            if array[j] > array[j+1] {
+                array.swapAt(j,j+1)
+                isSorted = false
+            }
+        }
+        if isSorted {
+            break
+        }
+        isSorted = true 
+        
+        for j  in ((index + 1) ..< (array.count - index - 1)).reversed() {
+            if array[j] < array[j - 1] {
+                array.swapAt(j, j - 1)
+                isSorted = false
+            }
+        }
+        if isSorted {
+            break
+        }
+    }
+    return array
+}
 var array:[Int]  = [2,4,2,1,3,9,2,4,5,7,9,3]
-//bubbleSort(array: &array)
-bubbleSort2(array: &array)
+var array1:[Int]  = [2,4,2,1,3,9,2,4,5,7,9,3]
+var array2:[Int]  = [2,4,2,1,3,9,2,4,5,7,9,3]
+var array3:[Int]  = [2,4,2,1,3,9,2,4,5,7,9,3]
+
+bubbleSort(array: &array)
+bubbleSort2(array: &array1)
+bubbleSort3(array: &array2)
+bubbleSort4(array: &array3)
 
 
 

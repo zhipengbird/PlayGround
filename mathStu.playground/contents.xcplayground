@@ -8,5 +8,14 @@
         <page name='队列'/>
         <page name='BinaryHeap'/>
         <page name='PriorityQueue'/>
+        <page name='最大公约数'/>
+        <page name='快排'/>
+        <page name='DeleteNum'/>
+        <page name='BitMap'/>
+        <page name='糖果'/>
+        <page name='leetcode17 打印从1到最大的n位数'/>
+        <page name='无效化 IP 地址'/>
+        <page name='二叉树'/>
+        <page name='字符串解码'/>
     </pages>
 </playground>
